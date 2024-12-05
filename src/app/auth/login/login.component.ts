@@ -26,7 +26,9 @@ export class LoginComponent {
       if (savedForm) {
         const loadedFormData = JSON.parse(savedForm);
         const savedEmail = loadedFormData.email;
+        setTimeout(() => {
         this.form().controls['email'].setValue(savedEmail);
+        }, 1);
       }
       
       if (savedForm) {
